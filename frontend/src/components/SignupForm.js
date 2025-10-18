@@ -21,7 +21,7 @@ function SignupForm({ setCurrentForm }) {
       return;
     }
     try {
-      const response = await axios.post('/api/auth/signup', {
+      const response = await axios.post('https://soni-backend.onrender.com/api/auth/signup', {
         email: formData.email,
         password: formData.password,
       });

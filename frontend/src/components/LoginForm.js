@@ -17,7 +17,7 @@ function LoginForm({ setCurrentForm }) {
     setError('');
     setSuccess('');
     try {
-      const response = await axios.post('/api/auth/login', formData);
+      const response = await axios.post('https://soni-backend.onrender.com/api/auth/login', formData);
       setSuccess('Login successful!');
       localStorage.setItem('token', response.data.token);
       // Optionally redirect or update state

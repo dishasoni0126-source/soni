@@ -21,7 +21,7 @@ function ResetPasswordForm({ token, setCurrentForm }) {
       return;
     }
     try {
-      await axios.post('/api/auth/reset-password', {
+      await axios.post('https://soni-backend.onrender.com/api/auth/reset-password', {
         token,
         newPassword: formData.newPassword,
       });

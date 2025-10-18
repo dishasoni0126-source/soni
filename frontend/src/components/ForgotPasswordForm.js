@@ -13,7 +13,7 @@ function ForgotPasswordForm({ setCurrentForm, setResetToken }) {
     setError('');
     setSuccess('');
     try {
-      const response = await axios.post('/api/auth/forgot-password', { email });
+      const response = await axios.post('https://soni-backend.onrender.com/api/auth/forgot-password', { email });
       setSuccess('Reset token sent! Check your email (or console for demo).');
       setResetToken(response.data.resetToken); // For demo, set token directly
       setCurrentForm('reset');
